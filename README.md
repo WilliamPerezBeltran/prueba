@@ -6,13 +6,9 @@ Write a method that takes two parameters. The first parameter is an array of int
 
 **Example:**
 If the first parameter is `[1, 2, 3, 3, 4, 5]` and the second parameter is `3`, the method should return `2`.
----
 
 #### SolutionA: Algorithm Explanation
-The SolutionA class counts the occurrences of a target value in a sorted array. It first uses the `binarySearchFirst` method to find the index of the first occurrence of the target using binary search, which ensures a time complexity of O(log n). If the target is found, it then counts the subsequent occurrences of the target by iterating through the array starting from the first found index.
-
-This approach efficiently handles sorted arrays by combining binary search with a linear scan for counting. The overall time complexity is O(log n + k), where `k` is the number of occurrences of the target. This makes the solution scalable for large arrays, especially when the target value appears multiple times.
----
+The SolutionA class counts the occurrences of a target value in a sorted array. It first uses the `binarySearchFirst` method to find the index of the first occurrence of the target using binary search, which ensures a time complexity of O(log n). If the target is found, it then counts the subsequent occurrences of the target by iterating through the array starting from the first found index. This approach efficiently handles sorted arrays by combining binary search with a linear scan for counting. The overall time complexity is O(log n + k), where `k` is the number of occurrences of the target. This makes the solution scalable for large arrays, especially when the target value appears multiple times.
 
 #### SolutionA: Java Method Implementation
 
@@ -61,10 +57,7 @@ public class SolutionA {
 ```
 
 #### SolutionB: Algorithm Explanation
-The SolutionB class counts the occurrences of a target value in a sorted array by iterating through the array. It maintains a count variable, which is incremented whenever the target value is found. If a value greater than the target is encountered, the loop terminates early, taking advantage of the sorted nature of the array to avoid unnecessary checks.
-
-This method works well for sorted arrays because once a value greater than the target is encountered, further values cannot be the target, allowing the function to exit early and optimize performance. The time complexity is O(n) in the worst case, where `n` is the size of the array, but it can be faster if the target is found early or if the loop breaks prematurely. However, for very large arrays with many occurrences of the target, this method might be slower compared to binary search-based approaches.
----
+The SolutionB class counts the occurrences of a target value in a sorted array by iterating through the array. It maintains a count variable, which is incremented whenever the target value is found. If a value greater than the target is encountered, the loop terminates early, taking advantage of the sorted nature of the array to avoid unnecessary checks. This method works well for sorted arrays because once a value greater than the target is encountered, further values cannot be the target, allowing the function to exit early and optimize performance. The time complexity is O(n) in the worst case, where `n` is the size of the array, but it can be faster if the target is found early or if the loop breaks prematurely. However, for very large arrays with many occurrences of the target, this method might be slower compared to binary search-based approaches.
 
 #### SolutionB: Java Method Implementation
 ```java
